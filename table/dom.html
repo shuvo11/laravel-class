@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>DOM Calculator</title>
+
+        <script type="text/javascript">
+
+
+            function calculator(operator)
+            {
+                first_number=Number(document.getElementById('first_number').value);
+                second_number=Number(document.getElementById('second_number').value);
+                //alert(first_number);
+
+                //alert(operator);
+
+                switch(operator)
+                {
+                    case '+':
+                        result=first_number+second_number;
+                        break;
+                    case '-':
+                        result=first_number-second_number;
+                        break;
+                    case '*':
+                        result=first_number*second_number;
+                        break;
+                    case '/':
+                        result=first_number/second_number;
+                        break;
+                    case '%':
+                        result=first_number%second_number;
+                        break;
+                }
+
+                
+                //alert(result);
+                document.getElementById('res').innerHTML=result;
+
+            }
+
+
+
+
+
+
+            // function add(x,y)
+            // {
+            //     z=x+y;
+            //     return z;   
+            // }
+
+
+
+            // document.write(add(300,50));
+        </script>
+
+
+    </head>
+    <body>
+        <table border="1" align="center" width="500px">
+            <tr>
+                <td>First Number</td>
+                <td>
+                    <input type="number" id="first_number" size="40">
+                </td>
+            </tr>
+            <tr>
+                <td>Second Number</td>
+                <td>
+                    <input type="number" id="second_number" size="40">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="+" name="btn" onclick="calculator('+')">
+                    <input type="button" value="-" name="btn" onclick="calculator('-')">
+                    <input type="button" value="*" name="btn" onclick="calculator('*')">
+                    <input type="button" value="/" name="btn" onclick="calculator('/')">
+                    <input type="button" value="%" name="btn" onclick="calculator('%')">
+                </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td>
+                    <span id="res">----------</span>
+                </td>
+            </tr>
+        </table>
+
+        <div class="calculator">
+            <div class="input" id="input"></div>
+            <div class="buttons">
+              <div class="operators">
+                <div>+</div>
+                <div>-</div>
+                <div>&times;</div>
+                <div>&divide;</div>
+              </div>
+              <div class="leftPanel">
+                <div class="numbers">
+                  <div>7</div>
+                  <div>8</div>
+                  <div>9</div>
+                </div>
+                <div class="numbers">
+                  <div>4</div>
+                  <div>5</div>
+                  <div>6</div>
+                </div>
+                <div class="numbers">
+                  <div>1</div>
+                  <div>2</div>
+                  <div>3</div>
+                </div>
+                <div class="numbers">
+                  <div>0</div>
+                  <div>.</div>
+                  <div id="clear">C</div>
+                </div>
+              </div>
+              <div class="equal" id="result">=</div>
+            </div>
+          </div>
+          <script src="js.js"></script>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js partice</title>
+</head>
+<body>
+    <div id="lol"></div>
+
+
+
+
+
+
+
+    <script language="javascript" type="text/javascript">
+        let car=Array("maroti","tata","toita");
+        document.getElementById("lol").innerHTML =car;
+
+
+        // array item acess 
+        let tata=car[1];
+        document.getElementById("lol").innerHTML = tata;
+
+        // array lenght proparty
+
+        let len =car.length;
+        document.getElementById("lol").innerHTML = len;
+
+        // acess last array item 
+
+        let last = car[car.length -1];
+         document.getElementById("lol").innerHTML = last;
+
+         // loop over an array item
+
+         car.forEach((item,index,Array) =>{console.log(item,index);} );
+
+         // array method toString
+       
+         let st =car.toString();
+
+         document.getElementById("lol").innerHTML = st;
+
+         // remove item on array on pop
+
+         let popx= car.pop();
+
+         document.getElementById("lol").innerHTML = popx;
+
+         // item push on array on your list 
+
+         car.push("walton");
+
+         document.getElementById("lol").innerHTML =car;
+
+         // shift on array remove first item in array
+
+         car.shift();
+         document.getElementById("lol").innerHTML =car;
+
+
+         // un shift in array beggining first method in unshift array 
+
+         car.unshift("royolros");
+
+         document.getElementById("lol").innerHTML =car;
+
+         // conconnet the array include or add 2 both array
+
+         let bike =["hounda","tvs","baja"];
+         let totallist =car.concat(bike);
+
+         document.getElementById("lol").innerHTML =totallist;
+
+         // sort array method 
+
+         totallist.sort();
+         document.getElementById("lol").innerHTML =totallist;
+
+         // reverse method 
+
+         totallist.reverse();
+         document.getElementById("lol").innerHTML =totallist;
+
+
+      let num1 =[2,3,4,5,6,7];
+      let num2 =num1.map(multiply);
+      
+      function multiply(value){
+        return value * 2;
+      }
+
+      document.getElementById("lol").innerHTML =num2;
+    </script>
+</body>
+</html>

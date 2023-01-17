@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>DOM Calculator</title>
+
+        <script type="text/javascript">
+
+
+            function calculator(operator)
+            {
+                first_number=Number(document.getElementById('first_number').value);
+                second_number=Number(document.getElementById('second_number').value);
+        
+
+
+
+                     if (operator == '+') {
+                      result=first_number+second_number;
+                         }
+                    else if (operator == '-') {
+                    result=first_number-second_number;
+                      }
+                   else if (operator == '*') {
+                    result=first_number*second_number;
+                      }
+                      else if (operator == '/') {
+                    result=first_number/second_number;
+                      }
+                      else if (operator == '%') {
+                      result=first_number%second_number;
+                      }
+                     else {
+                        result=first_number+second_number;
+                    }
+
+                
+            
+                document.getElementById('res').innerHTML=result;
+
+            }
+
+
+
+
+
+        </script>
+
+
+    </head>
+    <body>
+        <table border="1" align="center" width="500px">
+            <tr>
+                <td>First Number</td>
+                <td>
+                    <input type="number" id="first_number" size="40">
+                </td>
+            </tr>
+            <tr>
+                <td>Second Number</td>
+                <td>
+                    <input type="number" id="second_number" size="40">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="+" name="btn" onclick="calculator('+')">
+                    <input type="button" value="-" name="btn" onclick="calculator('-')">
+                    <input type="button" value="*" name="btn" onclick="calculator('*')">
+                    <input type="button" value="/" name="btn" onclick="calculator('/')">
+                    <input type="button" value="%" name="btn" onclick="calculator('%')">
+                </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td>
+                    <span id="res">----------</span>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
