@@ -14,18 +14,23 @@
 
 
                      if (operator == '+') {
-                      result=first_number+second_number;
+                        operatorName = "Addition";
+                        result=first_number+second_number;
                          }
                     else if (operator == '-') {
+                        operatorName = "Subtraction";
                     result=first_number-second_number;
                       }
                    else if (operator == '*') {
+                    operatorName = "Multiplication";
                     result=first_number*second_number;
                       }
                       else if (operator == '/') {
+                        operatorName = "Division";
                     result=first_number/second_number;
                       }
                       else if (operator == '%') {
+                        operatorName = "modulas";
                       result=first_number%second_number;
                       }
                      else {
@@ -33,7 +38,7 @@
                     }
 
                 
-            
+                document.getElementById('calculate').innerHTML=operatorName;
                 document.getElementById('res').innerHTML=result;
 
             }
@@ -71,7 +76,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Result</td>
+                <td span id="calculate">Result</td>
                 <td>
                     <span id="res">----------</span>
                 </td>

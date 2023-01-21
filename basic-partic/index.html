@@ -9,13 +9,7 @@
 <body>
     <div id="lol"></div>
 
-
-
-
-
-
-
-    <script language="javascript" type="text/javascript">
+  <script language="javascript" type="text/javascript">
         let car=Array("maroti","tata","toita");
         document.getElementById("lol").innerHTML =car;
 
@@ -84,16 +78,35 @@
 
          totallist.reverse();
          document.getElementById("lol").innerHTML =totallist;
+            // array map 
 
+                let num1 =[2,3,4,5,6,7];
+                let num2 =num1.map(multiply);
+                
+                function multiply(value){
+                    return value * 2;
+                }
 
-      let num1 =[2,3,4,5,6,7];
-      let num2 =num1.map(multiply);
-      
-      function multiply(value){
-        return value * 2;
-      }
+                document.getElementById("lol").innerHTML =num2;
 
-      document.getElementById("lol").innerHTML =num2;
+            // array filter 
+
+            let num3 =num1.filter(com);
+
+            function com(value){
+                return value>4;
+            }
+            document.getElementById("lol").innerHTML =num3;
+
+            // array reduce
+
+            let red = num1.reduce(sum);
+
+            function sum(total,value){
+                return total+value;
+            }
+            document.getElementById("lol").innerHTML =red;
+
     </script>
 </body>
 </html>
